@@ -1,0 +1,74 @@
+:root{
+  --blue: #2563eb;
+  --muted: #f3f4f6;
+  --text: #111827;
+  --card-bg: #fff;
+  --shadow: 0 8px 24px rgba(17,24,39,0.06);
+}
+
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+     background:#f7f8fb;color:var(--text);line-height:1.5}
+
+/* Header */
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:28px 48px 12px 48px;background:transparent;
+}
+.brand h1{
+  color:var(--blue);font-size:36px;font-weight:700;letter-spacing:-0.5px;
+}
+.site-nav a{
+  margin-left:22px;color:#3f3f46;text-decoration:none;font-weight:500;
+}
+.site-nav a:hover{color:var(--blue)}
+
+/* Container */
+.container{
+  max-width:1280px;margin:22px auto;padding:0 28px 60px;
+}
+
+/* Filters */
+.filters{display:flex;gap:12px;margin-bottom:18px}
+.filter-btn{
+  background:var(--muted);border:none;padding:8px 14px;border-radius:8px;
+  cursor:pointer;font-weight:600;color:#374151;box-shadow:inset 0 -1px 0 rgba(0,0,0,0.02);
+}
+.filter-btn.active{background:var(--blue);color:white;box-shadow:none}
+
+/* Cards grid */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+
+/* Card */
+.card{
+  background:var(--card-bg);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+}
+.card-media img{width:100%;height:180px;object-fit:cover;display:block}
+.card-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
+.tag{
+  display:inline-block;background:#eef2ff;color:var(--blue);padding:6px 8px;border-radius:8px;
+  font-size:12px;margin-bottom:12px
+}
+.card-title{font-size:18px;margin-bottom:8px}
+.card-desc{color:#6b7280;margin-bottom:16px;flex:1}
+.btn{display:inline-block;text-decoration:none;text-align:center;padding:12px 16px;border-radius:10px;font-weight:700}
+.start-btn{background:var(--blue);color:white;width:100%;box-shadow:0 6px 18px rgba(37,99,235,0.18)}
+.start-btn:hover{transform:translateY(-2px);transition:transform .15s ease}
+
+/* Responsive */
+@media (max-width:1100px){
+  .cards-grid{grid-template-columns:repeat(2, 1fr)}
+}
+@media (max-width:720px){
+  .site-header{padding:18px}
+  .brand h1{font-size:28px}
+  .cards-grid{grid-template-columns:1fr}
+  .card-media img{height:200px}
+  .site-nav{display:none}
+}

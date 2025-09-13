@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Readify 24/7</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Readify 24/7</h1>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#">Home</a>
+      <a href="#">Reading</a>
+      <a href="#">Quiz</a>
+      <a href="#">Vocabulary</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Filter pills -->
+    <section class="filters">
+      <button class="filter-btn active" data-level="All">All</button>
+      <button class="filter-btn" data-level="Beginner">Beginner</button>
+      <button class="filter-btn" data-level="Intermediate">Intermediate</button>
+      <button class="filter-btn" data-level="Advanced">Advanced</button>
+    </section>
+
+    <!-- Cards grid -->
+    <section class="cards-grid" id="cardsGrid">
+      <!-- Card 1 -->
+      <article class="card" data-level="Beginner">
+        <div class="card-media">
+          <img src="https://placehold.co/1200x400?text=300%C3%97150" alt="cover">
+        </div>
+        <div class="card-body">
+          <span class="tag">Beginner</span>
+          <h2 class="card-title">The Fox and The Grapes</h2>
+          <p class="card-desc">A short fable about a fox who wanted some grapes.</p>
+          <a class="btn start-btn" href="reading.html">Start Reading</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-level="Beginner">
+        <div class="card-media">
+          <img src="https://placehold.co/1200x400?text=300%C3%97150" alt="cover">
+        </div>
+        <div class="card-body">
+          <span class="tag">Beginner</span>
+          <h2 class="card-title">The Ant and The Grasshopper</h2>
+          <p class="card-desc">A classic story about hard work and laziness.</p>
+          <a class="btn start-btn" href="reading.html">Start Reading</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-level="Intermediate">
+        <div class="card-media">
+          <img src="https://placehold.co/1200x400?text=300%C3%97150" alt="cover">
+        </div>
+        <div class="card-body">
+          <span class="tag">Intermediate</span>
+          <h2 class="card-title">The Lion and The Mouse</h2>
+          <p class="card-desc">A story that shows how small acts of kindness matter.</p>
+          <a class="btn start-btn" href="reading.html">Start Reading</a>
+        </div>
+      </article>
+
+      <!-- (Tambahkan card lain sesuai kebutuhan, cukup copy structure di atas) -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
