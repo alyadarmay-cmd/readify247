@@ -6,25 +6,40 @@
   <title>The Fox and The Grapes - Reading</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .story p {
-      margin-bottom: 14px;
-      font-size: 17px;
-      line-height: 1.7;
-      text-align: justify;
+    .story p { 
+      margin-bottom: 14px; 
+      font-size: 17px; 
+      line-height: 1.7; 
+      text-align: justify; 
     }
+    .action-buttons { 
+      margin-top: 20px; 
+      display:flex; 
+      gap:10px; 
+      flex-wrap: wrap;
+    }
+    .action-buttons a {
+      padding: 10px 16px; 
+      border-radius:8px; 
+      text-decoration:none; 
+      font-weight:600;
+    }
+    .btn-quiz { background:#2563eb; color:#fff; }
+    .btn-vocab { background:#f3f4f6; border:1px solid #2563eb; color:#2563eb; }
+    .btn-quiz:hover { background:#1e40af; }
+    .btn-vocab:hover { background:#e0e7ff; }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="brand"><h1>Readify 24/7</h1></div>
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="quiz-fox.html">Take Quiz</a>
+      <a href="index.html#reading">Reading</a>
+      <a href="vocab-list.html">Vocabulary</a>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main class="container">
     <div class="card">
       <div class="card-body">
@@ -32,39 +47,21 @@
         <h2 class="card-title">The Fox and The Grapes</h2>
 
         <div class="story">
-          <p>
-            One warm afternoon, a fox was walking slowly through the forest. The sun was shining, 
-            and the fox was very hungry. He had searched for food all morning, but he could not 
-            find anything to eat. His stomach growled, and he wished he could find something delicious.
-          </p>
+          <p>One warm afternoon, a hungry fox was walking slowly through the forest. The sun was shining, and the air was hot. The fox had been looking for food all morning, but he found nothing to eat. His stomach growled loudly, and he was becoming tired.</p>
 
-          <p>
-            Then, he noticed a vineyard not far away. On the vines, he saw many bunches of grapes. 
-            They looked round, purple, and very juicy. The fox’s mouth began to water. 
-            “Ah, finally, some food for me!” he said. He imagined how sweet the grapes would taste.
-          </p>
+          <p>As he walked, the fox suddenly saw a vineyard near the forest path. On the vines, he noticed many bunches of grapes hanging. The grapes looked big, round, purple, and very juicy. At once, the fox felt excited. “Ah, finally, something delicious for me!” he said to himself. He imagined the sweet taste of the grapes in his mouth.</p>
 
-          <p>
-            The fox stood under the grapes and tried to reach them with his mouth, but they were too high. 
-            He jumped as high as he could, but he missed. He tried again, jumping higher, but he still 
-            could not reach the grapes.
-          </p>
+          <p>The fox stood under the vine and opened his mouth wide, but the grapes were too high. He jumped once, but he missed. He jumped again, trying harder, but still he could not reach them. The fox did not give up quickly. He walked back a few steps, ran forward, and leapt as high as he could. Again, the grapes were far above him.</p>
 
-          <p>
-            The fox did not give up at once. He walked back a few steps, ran forward quickly, and leapt 
-            with all his strength. Still, the grapes were far above him. He tried again and again. 
-            His legs became weak, and sweat ran down his face.
-          </p>
+          <p>He tried many times, again and again. The fox stretched his body, stood on his back legs, and even tried to climb a little, but it was useless. Sweat began to fall from his face, and his legs grew weaker. The grapes still hung high, shining in the sun.</p>
 
-          <p>
-            After many tries, the fox was very tired. He sat down on the ground to rest. He looked up 
-            at the grapes and sighed. Finally, he shook his head and said, 
-            “Those grapes are probably sour. I don’t want them anymore.” 
-            Then he turned around and walked away slowly, still hungry.
-          </p>
+          <p>Finally, the fox stopped. He sat under the vine, breathing heavily. He looked up at the grapes with tired eyes. After a moment, he shook his head and said, “Those grapes are probably sour. I don’t want them anymore.” Then, he slowly walked away, still hungry and disappointed.</p>
         </div>
 
-        <a class="btn start-btn" href="quiz-fox.html">Take Quiz</a>
+        <div class="action-buttons">
+          <a href="quiz-fox.html" class="btn-quiz">Take Quiz</a>
+          <a href="vocab-fox.html" class="btn-vocab">Highlight Vocabulary</a>
+        </div>
       </div>
     </div>
   </main>

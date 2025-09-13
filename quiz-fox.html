@@ -33,6 +33,32 @@
     }
     button:hover { background: #1e40af; }
     #result { margin-top: 25px; font-size: 18px; font-weight: bold; }
+
+    /* Back buttons */
+    .back-buttons {
+      margin-top: 25px;
+      display: flex;
+      gap: 10px;
+    }
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-reading {
+      background: #f3f4f6;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+    }
+    .back-home {
+      background: #2563eb;
+      color: #fff;
+    }
+    .back-home:hover { background: #1e40af; }
+    .back-reading:hover { background: #e0e7ff; }
   </style>
 </head>
 <body>
@@ -132,6 +158,12 @@
     </form>
 
     <div id="result"></div>
+
+    <!-- Back buttons -->
+    <div class="back-buttons">
+      <a href="reading-fox.html" class="back-reading">← Back to Reading</a>
+      <a href="index.html" class="back-home">🏠 Back to Home</a>
+    </div>
   </div>
 
   <script>
