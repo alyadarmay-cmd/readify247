@@ -13,7 +13,7 @@
     </div>
 
     <nav class="site-nav">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <a href="#">Reading</a>
       <a href="#">Quiz</a>
       <a href="#">Vocabulary</a>
@@ -23,7 +23,7 @@
 
   <main class="container">
     <!-- Filter pills -->
-    <section class="filters">
+    <section class="filters" aria-label="Filter stories">
       <button class="filter-btn active" data-level="All">All</button>
       <button class="filter-btn" data-level="Beginner">Beginner</button>
       <button class="filter-btn" data-level="Intermediate">Intermediate</button>
@@ -32,46 +32,55 @@
 
     <!-- Cards grid -->
     <section class="cards-grid" id="cardsGrid">
-      <!-- Card 1 -->
-      <article class="card" data-level="Beginner">
+      <!-- Card: The Fox and The Grapes -->
+      <article class="card" data-level="Beginner" data-slug="fox">
         <div class="card-media">
-          <img src="https://placehold.co/1200x400?text=300%C3%97150" alt="cover">
+          <img src="https://placehold.co/1200x400?text=The+Fox+and+The+Grapes" alt="The Fox and The Grapes cover">
         </div>
         <div class="card-body">
           <span class="tag">Beginner</span>
           <h2 class="card-title">The Fox and The Grapes</h2>
           <p class="card-desc">A short fable about a fox who wanted some grapes.</p>
-          <a class="btn start-btn" href="reading.html">Start Reading</a>
+          <div style="display:flex;gap:10px;flex-direction:column;">
+            <a class="btn start-btn" href="reading-fox.html">Start Reading</a>
+            <a class="btn" href="quiz-fox.html" style="background:#fff;color:var(--blue);border:1px solid var(--blue);font-weight:700;">Take Quiz</a>
+          </div>
         </div>
       </article>
 
-      <!-- Card 2 -->
-      <article class="card" data-level="Beginner">
+      <!-- Card: The Ant and The Grasshopper -->
+      <article class="card" data-level="Beginner" data-slug="ant">
         <div class="card-media">
-          <img src="https://placehold.co/1200x400?text=300%C3%97150" alt="cover">
+          <img src="https://placehold.co/1200x400?text=The+Ant+and+The+Grasshopper" alt="The Ant and The Grasshopper cover">
         </div>
         <div class="card-body">
           <span class="tag">Beginner</span>
           <h2 class="card-title">The Ant and The Grasshopper</h2>
           <p class="card-desc">A classic story about hard work and laziness.</p>
-          <a class="btn start-btn" href="reading.html">Start Reading</a>
+          <div style="display:flex;gap:10px;flex-direction:column;">
+            <a class="btn start-btn" href="reading-ant.html">Start Reading</a>
+            <a class="btn" href="quiz-ant.html" style="background:#fff;color:var(--blue);border:1px solid var(--blue);font-weight:700;">Take Quiz</a>
+          </div>
         </div>
       </article>
 
-      <!-- Card 3 -->
-      <article class="card" data-level="Intermediate">
+      <!-- Card: The Lion and The Mouse -->
+      <article class="card" data-level="Intermediate" data-slug="lion">
         <div class="card-media">
-          <img src="https://placehold.co/1200x400?text=300%C3%97150" alt="cover">
+          <img src="https://placehold.co/1200x400?text=The+Lion+and+The+Mouse" alt="The Lion and The Mouse cover">
         </div>
         <div class="card-body">
           <span class="tag">Intermediate</span>
           <h2 class="card-title">The Lion and The Mouse</h2>
           <p class="card-desc">A story that shows how small acts of kindness matter.</p>
-          <a class="btn start-btn" href="reading.html">Start Reading</a>
+          <div style="display:flex;gap:10px;flex-direction:column;">
+            <a class="btn start-btn" href="reading-lion.html">Start Reading</a>
+            <a class="btn" href="quiz-lion.html" style="background:#fff;color:var(--blue);border:1px solid var(--blue);font-weight:700;">Take Quiz</a>
+          </div>
         </div>
       </article>
 
-      <!-- (Tambahkan card lain sesuai kebutuhan, cukup copy structure di atas) -->
+      <!-- Tambah card lain di bawah (copy block article dan ganti data-slug, href, gambar, dsb.) -->
     </section>
   </main>
 

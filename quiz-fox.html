@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Fox and The Grapes - Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .quiz-card{ background:var(--card-bg); border-radius:12px; box-shadow:var(--shadow); padding:24px; max-width:800px; margin:auto; }
+    .quiz-question{ font-size:18px; font-weight:600; margin:14px 0 6px; }
+    .explanation{ margin-top:6px; font-size:14px; }
+    .correct{ color:green; }
+    .wrong{ color:red; }
+    .controls{ margin-top:18px; display:flex; gap:10px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><h1>Readify 24/7</h1></div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="reading-fox.html">Back to Reading</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="quiz-card">
+      <span class="tag">Quiz</span>
+      <h2 class="card-title">The Fox and The Grapes</h2>
+
+      <form id="quizForm">
+        <!-- Q1 -->
+        <div class="quiz-question">1. Where was the fox walking?</div>
+        <label><input type="radio" name="q1" value="a"> a) In a city</label>
+        <label><input type="radio" name="q1" value="b"> b) In a forest</label>
+        <label><input type="radio" name="q1" value="c"> c) In a desert</label>
+        <label><input type="radio" name="q1" value="d"> d) In a village</label>
+        <div id="ex-q1" class="explanation"></div>
+
+        <!-- Q2 -->
+        <div class="quiz-question">2. How did the fox feel at the beginning of the story?</div>
+        <label><input type="radio" name="q2" value="a"> a) Happy</label>
+        <label><input type="radio" name="q2" value="b"> b) Sleepy</label>
+        <label><input type="radio" name="q2" value="c"> c) Hungry</label>
+        <label><input type="radio" name="q2" value="d"> d) Angry</label>
+        <div id="ex-q2" class="explanation"></div>
+
+        <!-- Q3 -->
+        <div class="quiz-question">3. What did the fox see on the vine?</div>
+        <label><input type="radio" name="q3" value="a"> a) Apples</label>
+        <label><input type="radio" name="q3" value="b"> b) Grapes</label>
+        <label><input type="radio" name="q3" value="c"> c) Oranges</label>
+        <label><input type="radio" name="q3" value="d"> d) Pears</label>
+        <div id="ex-q3" class="explanation"></div>
+
+        <!-- Q4 -->
+        <div class="quiz-question">4. What color were the grapes?</div>
+        <label><input type="radio" name="q4" value="a"> a) Yellow</label>
+        <label><input type="radio" name="q4" value="b"> b) Green</label>
+        <label><input type="radio" name="q4" value="c"> c) Purple</label>
+        <label><input type="radio" name="q4" value="d"> d) Red</label>
+        <div id="ex-q4" class="explanation"></div>
+
+        <!-- Q5 -->
+        <div class="quiz-question">5. How did the fox try to get the grapes?</div>
+        <label><input type="radio" name="q5" value="a"> a) By climbing the tree</label>
+        <label><input type="radio" name="q5" value="b"> b) By shaking the vine</label>
+        <label><input type="radio" name="q5" value="c"> c) By jumping again and again</label>
+        <label><input type="radio" name="q5" value="d"> d) By asking another animal</label>
+        <div id="ex-q5" class="explanation"></div>
+
+        <!-- Q6 -->
+        <div class="quiz-question">6. Why couldn’t the fox eat the grapes?</div>
+        <label><input type="radio" name="q6" value="a"> a) They were too high</label>
+        <label><input type="radio" name="q6" value="b"> b) They were too sour</label>
+        <label><input type="radio" name="q6" value="c"> c) They were too small</label>
+        <label><input type="radio" name="q6" value="d"> d) They were not real</label>
+        <div id="ex-q6" class="explanation"></div>
+
+        <!-- Q7 -->
+        <div class="quiz-question">7. What did the fox say at the end?</div>
+        <label><input type="radio" name="q7" value="a"> a) “I will try again tomorrow.”</label>
+        <label><input type="radio" name="q7" value="b"> b) “Those grapes are probably sour.”</label>
+        <label><input type="radio" name="q7" value="c"> c) “I will ask for help.”</label>
+        <label><input type="radio" name="q7" value="d"> d) “I don’t like grapes.”</label>
+        <div id="ex-q7" class="explanation"></div>
+
+        <!-- Q8 -->
+        <div class="quiz-question">8. What is the moral of the story?</div>
+        <label><input type="radio" name="q8" value="a"> a) Never eat grapes in the forest.</label>
+        <label><input type="radio" name="q8" value="b"> b) If you want something, you must fight for it.</label>
+        <label><input type="radio" name="q8" value="c"> c) People often say bad things about what they cannot have.</label>
+        <label><input type="radio" name="q8" value="d"> d) The fox is the smartest animal.</label>
+        <div id="ex-q8" class="explanation"></div>
+
+        <div class="controls">
+          <button type="button" onclick="submitQuiz()">Submit</button>
+          <button type="button" onclick="resetQuiz()">Try Again</button>
+        </div>
+      </form>
+
+      <div id="result" class="quiz-result"></div>
+    </div>
+  </main>
+
+  <script>
+    // jawaban dan pembahasan - ganti jika perlu
+    const answers = {
+      q1: { correct: "b", explanation: "The fox was walking in a forest." },
+      q2: { correct: "c", explanation: "At the beginning, the fox felt hungry." },
+      q3: { correct: "b", explanation: "He saw grapes hanging on the vine." },
+      q4: { correct: "c", explanation: "The story describes the grapes as purple." },
+      q5: { correct: "c", explanation: "He tried by jumping again and again." },
+      q6: { correct: "a", explanation: "He couldn't reach them because they were too high." },
+      q7: { correct: "b", explanation: "He said the grapes were probably sour." },
+      q8: { correct: "c", explanation: "Moral: people often say bad things about what they cannot have." }
+    };
+
+    function submitQuiz() {
+      let score = 0;
+      const total = Object.keys(answers).length;
+      // clear previous per-question feedback
+      for (let q in answers) {
+        document.getElementById('ex-' + q).innerHTML = '';
+      }
+
+      for (let q in answers) {
+        const selected = document.querySelector('input[name="'+q+'"]:checked');
+        const exEl = document.getElementById('ex-' + q);
+        if (!selected) {
+          exEl.innerHTML = '<span class="wrong"><b>Not answered.</b></span>';
+          continue;
+        }
+        if (selected.value === answers[q].correct) {
+          score++;
+          exEl.innerHTML = `<span class="correct">✅ Correct. ${answers[q].explanation}</span>`;
+        } else {
+          exEl.innerHTML = `<span class="wrong">❌ Wrong. ${answers[q].explanation}</span>`;
+        }
+      }
+
+      const resultEl = document.getElementById('result');
+      resultEl.innerHTML = `<h3>You scored ${score} out of ${total}</h3>`;
+      resultEl.style.color = score >= Math.ceil(total*0.6) ? 'green' : 'red';
+      // scroll to result (optional)
+      resultEl.scrollIntoView({behavior: "smooth", block: "center"});
+    }
+
+    function resetQuiz() {
+      document.getElementById('quizForm').reset();
+      document.getElementById('result').innerHTML = '';
+      for (let q in answers) {
+        document.getElementById('ex-' + q).innerHTML = '';
+      }
+    }
+  </script>
+</body>
+</html>
