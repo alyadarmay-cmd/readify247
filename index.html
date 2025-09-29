@@ -5,31 +5,52 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Readify 24/7</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9fafb;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    h1 { font-size: 2.5rem; margin-bottom: 20px; color: #2563eb; }
-    .start-btn {
-      display: inline-block;
-      padding: 16px 28px;
-      font-size: 18px;
-      border-radius: 10px;
-      background: #2563eb;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .start-btn:hover { background: #1e40af; }
-  </style>
 </head>
 <body>
-  <h1>Welcome to Readify 24/7</h1>
-  <p>Improve your English with stories, quizzes, and vocabulary.</p>
-  <a class="start-btn" href="reading-list.html">Start Reading</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand"><h1>Readify 24/7</h1></div>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="reading-list.html">Reading</a>
+      <a href="vocab-list.html">Vocabulary</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Readify 24/7</h2>
+      <p>Improve your English with stories, quizzes, and vocabulary.</p>
+      <a href="reading-list.html" class="btn hero-btn">Start Reading</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <a href="reading-list.html" class="feature-card">
+      <span class="icon">📖</span>
+      <h3>Reading</h3>
+      <p>Enjoy short stories to practice reading comprehension.</p>
+    </a>
+
+    <a href="quiz.html" class="feature-card">
+      <span class="icon">📝</span>
+      <h3>Quiz</h3>
+      <p>Test your knowledge with interactive quizzes.</p>
+    </a>
+
+    <a href="vocab-list.html" class="feature-card">
+      <span class="icon">📚</span>
+      <h3>Vocabulary</h3>
+      <p>Learn and save new words from the stories.</p>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Readify 24/7. All rights reserved.</p>
+  </footer>
 </body>
 </html>
